@@ -9,13 +9,16 @@
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
+
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+[challenge]: ./writeup_resources/challenge.png
+[solidWhiteRight]: ./writeup_resources/solidWhiteRight.png
+[solidYellowLeft]: ./writeup_resources/solidYellowLeft.png
 
 ---
 
@@ -23,25 +26,30 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+	It looks nice catching white and yellow lane but it's only a good condition.
 
-Another shortcoming could be ...
+	1. There are no other cars in the near front sight
+	2. The time zone is daylight
+	3. There are no obstacles on the floor like a snowy, rainy .. 
+	4. There is no shadow
+
+
+![alt text][solidWhiteRight]
+
+![alt text][solidYellowLeft]
+
+	It could not distinguish the shadow and the vehicle.
+
+![alt text][challenge]
+
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+	1. Increase the contrast of photographs
+	2. Predict the next lane
